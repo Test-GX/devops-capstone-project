@@ -7,15 +7,32 @@ labels: user story
 
 ---
 
-**As a** [role]  
-**I need** [function]  
-**So that** [benefit]  
-      
-### Details and Assumptions
-    * [document what you know]      
+body:
+- type: markdown
+  attributes:
+    value: |
+      **As a** [role]  
+      **I need** [function]  
+      **So that** [benefit]  
 
-### Acceptance Criteria     
-    gherkin 
-    Given [some context]
-    When [certain action is taken]
-    Then [the outcome of action is observed]
+- type: textarea
+  id: assumptions
+  attributes:
+    label: Details and Assumptions
+    description: "Document any assumptions or additional details here."
+    value: |
+      * [document what you know]  
+  validations:
+    required: false
+
+- type: textarea
+  id: acceptance-criteria
+  attributes:
+    label: Acceptance Criteria  
+    description: "Define the acceptance criteria using Gherkin syntax."
+    value: |
+      Given [some context]  
+      When [certain action is taken]  
+      Then [the outcome of action is observed]  
+  validations:
+    required: true
